@@ -145,9 +145,14 @@ class EriiDesktopPet:
         self.root.update_idletasks()
         screen_w = self.root.winfo_screenwidth()
         screen_h = self.root.winfo_screenheight()
-        x = max(0, screen_w - CELL_W - 40)
-        y = max(0, screen_h - CELL_H - 80)
+        # Start in the center so mixed-DPI or multi-monitor taskbar geometry
+        # cannot place the borderless window just outside the visible desktop.
+        x = max(0, (screen_w - CELL_W) // 2)
+        y = max(0, (screen_h - CELL_H) // 2)
         self.root.geometry(f"{CELL_W}x{CELL_H}+{x}+{y}")
+        self.root.deiconify()
+        self.root.lift()
+        self.root.attributes("-topmost", True)
 
     def play(self, state: str, loops: int = 1) -> None:
         if state not in ANIMATIONS:
