@@ -1,2 +1,2 @@
 # Keep Windows batch launchers usable in GitHub source archives.
-*.cmd -text
+*.cmd -text whitespace=cr-at-eol

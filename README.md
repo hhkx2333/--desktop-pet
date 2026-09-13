@@ -27,8 +27,8 @@
 ## 快速开始
 
 1. 点击 GitHub 页面右上方 **Code → Download ZIP**，解压到一个长期保留的目录。
-2. 双击 `install.cmd`。它会安装 Pillow 并立即启动桌宠。
-3. 以后双击 `start-erii.cmd` 即可启动。
+2. 双击 `install.cmd`。它会安装 Pillow、在桌面创建“绘梨衣”快捷方式并立即启动桌宠。
+3. 以后双击桌面的“绘梨衣”，或双击目录中的 `start-erii.cmd` 即可启动。
 
 也可以在 PowerShell 中手动运行：
 
@@ -74,6 +74,7 @@ powershell -ExecutionPolicy Bypass -File .\uninstall-autostart.ps1
 - `install.cmd`：安装依赖并启动
 - `start-erii.cmd`：普通启动器
 - `launch-hidden.vbs`：无命令行窗口启动器
+- `create-desktop-shortcut.ps1`：创建桌面快捷方式
 - `install-autostart.ps1` / `uninstall-autostart.ps1`：管理开机自启动
 
 ## 验证资源

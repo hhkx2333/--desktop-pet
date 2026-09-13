@@ -6,6 +6,7 @@ where py >nul 2>&1
 if not errorlevel 1 (
   py -3 -m pip install -r requirements.txt
   if errorlevel 1 goto :failed
+  powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0create-desktop-shortcut.ps1"
   call start-erii.cmd
   exit /b 0
 )
@@ -14,6 +15,7 @@ where python >nul 2>&1
 if not errorlevel 1 (
   python -m pip install -r requirements.txt
   if errorlevel 1 goto :failed
+  powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0create-desktop-shortcut.ps1"
   call start-erii.cmd
   exit /b 0
 )
